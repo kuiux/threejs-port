@@ -1,0 +1,125 @@
+.lock {
+  min-height: 100vh;
+  // -webkit-app-region: drag;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/home-bottom.svg'),
+      url('../../assets/images/home-star.svg');
+    background-size: cover, contain;
+    background-position: 50% 100%, -30% -30%;
+  }
+  &__logo {
+    width: 190px;
+    margin-top: 4rem;
+  }
+  .lockTranslate{
+    transform: translateY(-100px);
+  }
+  h5 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Uni Neue Bold';
+    text-shadow: 0px 0px 15px rgba(19, 213, 255, 0.5);
+    background: linear-gradient(
+      180deg,
+      #00b2ff 20.45%,
+      var(--unnamed-color-1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__label {
+    h6 {
+      margin-left: 10px;
+      margin-bottom: 0px;
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.05em;
+      display: block;
+      color: var(--unnamed-color-9);
+      line-height: 15px;
+      font-family: 'Uni Neue Regular';
+      padding: 10px 0;
+    }
+    &--hint {
+      h6 {
+        opacity: 0.5;
+        font-family: 'Uni Neue Regular';
+        cursor: pointer;
+      }
+      h6:hover {
+        opacity: 0.8 !important;
+      }
+    }
+  }
+  &__inputBox {
+    margin-top: 10px;
+    position: relative;
+    -webkit-app-region: no-drag;
+    &--validate {
+      color: red;
+      margin-top: 5px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: left;
+      font-family: 'Uni Neue Regular';
+      // text-transform: uppercase;
+    }
+    &--warning {
+      color: #fdbc40;
+      margin-top: 10px;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: left;
+      font-family: 'Uni Neue Regular';
+    }
+    &__input {
+      width: 100%;
+      height: 45px;
+      background: var(--unnamed-color-114);
+      box-sizing: border-box;
+      border: 1px solid var(--unnamed-color-36);
+      color: var(--unnamed-color-13);
+      font-family: 'Uni Neue Book';
+      font-size: 16px;
+      padding: 12px 17px;
+      padding-right: 45px;
+      line-height: 17px;
+      outline: none;
+      @media (prefers-color-scheme: light) {
+        box-shadow: 0px 0px 30px rgba(99, 137, 170, 0.14),
+          inset 0px 0px 9px rgba(99, 137, 170, 0.2);
+        border-radius: 8px;
+      }
+      @media (prefers-color-scheme: dark) {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+      }
+      &--error {
+        border: 1px solid #ed3939 !important;
+        box-shadow: 0px 0px 10px rgba(235, 87, 87, 0.5) !important;
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+  }
+}
