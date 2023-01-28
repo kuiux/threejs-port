@@ -1,0 +1,198 @@
+.PricingModal {
+  font-family: 'Uni Neue Book';
+  color: var(--unnamed-color-13);
+  position: absolute;
+  background: var(--unnamed-color-110);
+  top: 50%;
+  left: 50%;
+  right: 'auto';
+  bottom: 'auto';
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 6px;
+  min-width: 656px;
+
+  & > .close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  &__container {
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    border: 1px solid var(--unnamed-color-36);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 120px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    img {
+      margin-right: 1.5rem;
+    }
+    p:first-child {
+      margin-bottom: 0px;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: -1px;
+      color: var(--unnamed-color-13);
+    }
+    p:nth-child(2) {
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--unnamed-color-5);
+      margin-bottom: 0;
+      margin-top: 5px;
+    }
+    p:last-child {
+      font-family: 'Uni Neue Regular';
+      font-style: normal;
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: 1px;
+      color: var(--unnamed-color-2);
+      text-align: center;
+
+      width: 88px;
+      height: 20px;
+      border: 1px solid var(--unnamed-color-8);
+      box-sizing: border-box;
+      border-radius: 2px;
+
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &__body {
+    margin-top: 35px;
+    position: relative;
+    &__gradient {
+      position: absolute;
+      top: 70%;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(180deg, rgba(0, 14, 21, 0) 0%, #000e15 100%);
+      border-radius: 0px 0px 6px 6px;
+      z-index: 1;
+    }
+    .countryForm {
+      background: var(--unnamed-color-110);;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-sizing: border-box;
+      border-radius: 6px;
+      .countryItem {
+        border-bottom: 0.6px solid rgba(255, 255, 255, 0.06);
+        &__inputBox {
+          width: 100%;
+          position: relative;
+          &__input {
+            width: 100%;
+            background: #000b11;
+            border: 0.6px solid var(--unnamed-color-36);
+            box-sizing: border-box;
+            border-radius: 4px;
+            color: var(--unnamed-color-13);
+            font-family: 'Uni Neue Book';
+            font-size: 14px;
+            padding: 12px 17px;
+            padding-left: 45px;
+            line-height: 17px;
+            outline: none;
+            &::placeholder {
+              color: #6389aa;
+            }
+            &--error {
+              border: 1px solid #ed3939 !important;
+              box-shadow: 0px 0px 10px rgba(235, 87, 87, 0.5) !important;
+            }
+          }
+
+          & img {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            cursor: pointer;
+          }
+        }
+        .formatOptionLabel {
+          padding: 9px;
+          display: flex;
+          align-items: center;
+          font-family: 'Uni Neue Book';
+          font-size: 14px;
+          font-style: normal;
+          font-weight: normal;
+          letter-spacing: 0.5px;
+          &__img {
+            position: relative;
+            .smallGlobe {
+              width: 13px;
+            }
+            .flagImg {
+              width: 13px;
+              filter: brightness(50%);
+            }
+            .signal {
+              position: absolute;
+              left: 19.07px;
+              top: -8px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            height: 28px;
+            background: var(--unnamed-color-110);;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-sizing: border-box;
+            border-radius: 6px;
+            margin-right: 10px;
+          }
+          span {
+            color: #6389aa;
+          }
+        }
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: none !important;
+  }
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000000, 0.75);
+  z-index: 20;
+}
+
+.searchList {
+  height: 322px;
+  overflow-y: scroll;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: var(--unnamed-color-102);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--unnamed-color-102);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.06);
+}
